@@ -1,0 +1,26 @@
+{
+  "name": "coding_problem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johntenezaca7/CodingProblems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johntenezaca7/CodingProblems/issues"
+  },
+  "homepage": "https://github.com/johntenezaca7/CodingProblems#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}
