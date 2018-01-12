@@ -20,7 +20,7 @@ describe('LinkedList', () => {
         expect(testHead).to.equal(testTail)
     });
 
-    it('Heads next value be the same head value', () => {
+    it('Heads value be the same heads next value', () => {
         testList.addToTail(5);
         testList.addToTail(8);
         testList.addToTail(3);
@@ -29,6 +29,29 @@ describe('LinkedList', () => {
         const testTail = testList.head.next.value;
 
         expect(testHeadNext).to.equal(testTail)
+    });
+
+    it('It should be able to return true for is node is on the list', () => {
+        testList.addToTail(5);
+        testList.addToTail(8);
+        testList.addToTail(3);
+        testList.addToTail(1);
+        testList.addToTail(2);
+        testList.addToTail(4);
+
+        expect(testList.contains(1)).to.be.true;
+    });
+    it('It should be able to remove head from list', () => {
+        testList.addToTail(5);
+        testList.addToTail(8);
+        testList.addToTail(3);
+        testList.addToTail(1);
+
+        const oldHead = testList.removeHead();
+        const newHead= testList.head.value;
+ 
+        expect(newHead).to.equal(8);
+
     })
 })
 

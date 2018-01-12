@@ -21,6 +21,7 @@ var LinkedList = function() {
         }
         let currentHead = this.head;
         this.head = this.head.next;
+        this.head.value = this.head.next.value
         return currentHead.value;
     };
 
@@ -43,5 +44,18 @@ var Node = function(value){
     this.next = null;
   };
   
+// var testList = new LinkedList();
+
+// testList.addToTail(5);
+// testList.addToTail(8);
+// testList.addToTail(3);
+// testList.addToTail(1);
+
+// const oldHead = testList.removeHead();
+// const newHead= testList.head.value;
+// console.log('llllllll',oldHead);
+// console.log('dss', newHead)
+
+
 module.exports.Node = Node;
 module.exports.LinkedList = LinkedList;
