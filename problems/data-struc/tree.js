@@ -36,8 +36,7 @@ Tree.prototype.traverse = function(callback){
 }
 
 function addT(value){
-  
-    console.log('d')
+ return 'tree'
 };
 
 var newtree = new Tree('one');
@@ -45,5 +44,5 @@ var newtree = new Tree('one');
 newtree.addChild('two')
 newtree.addChild('three')
 newtree.addChild('four')
-console.log(newtree.traverse(addT))
+console.log(newtree.traverse((val) => { val + 's'; return }))
 console.log(newtree)
