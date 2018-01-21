@@ -44,5 +44,5 @@ var newtree = new Tree('one');
 newtree.addChild('two')
 newtree.addChild('three')
 newtree.addChild('four')
-console.log(newtree.traverse((val) => { val + 's'; return }))
+console.log(newtree.traverse((val) => { val + 's'; }))
 console.log(newtree)

@@ -21,3 +21,11 @@ var BinaryTree = function(value){
             console.log('Tree already contains this value')
         }
     }
+
+    BinaryTree.prototype.contains = function(target){
+        if( target === this.value ){
+            return true;
+        } else if (val < this.value){
+            return
+        }
+    }

@@ -233,9 +233,34 @@
 // }
 
 let deletionDistance = (str1, str2) => {
-    let [long, short] = [str1, str2].sort((a, b) => b.length - a.length)
-    let sameLen = short.split('').filter(e => long.split('').includes(e)).length
-    return str1.length + str2.length - (2 * sameLen) 
+    let short, long;
+
+    if(str1.length < str2.length){
+        short = str1;
+        long = str2;
+    } else {
+        short = str2;
+        long = str1
+    }
+
+
+    let commonChar = []
+    short = short.split('')
+
+    for(var i = 0; i < long.split('').length; i++){
+        if(long.includes(short[i])){
+            commonChar.push(short[i])
+        }
+      }
+    
+
+
+    console.log('common',commonChar)
+    let total = str1.length + str2.length;
+    console.log('total', total);
+    let sub = 2 * commonChar.length;
+    console.log('sub', sub)
+    return total - sub
    }
 
-console.log(deletionDistance('dog', 'frog'))
+console.log(deletionDistance('ab', 'ba'))
