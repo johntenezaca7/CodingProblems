@@ -232,6 +232,33 @@
 //     return "test"
 // }
 
+
+
+function deletionDistance(str1, str2) {
+    let matchLength = 0;
+    let i = 0; // index for keep track of str1
+    let j = 0; // index for keep track of str2
+    let curMatch = 0;
+    while(i < str1.length) {
+      let curMatch = 0;
+      j = 0;
+      while(j < str2.length) {
+        if (str1[i] === str2[j]) {
+          curMatch++;
+          i++;
+          j++;
+        } else {
+          j++;
+        }
+      }
+      i++;
+      if (curMatch > matchLength) {
+        matchLength = curMatch;
+      }
+    }
+    
+    return (str1.length - matchLength) + (str2.length - matchLength);
+
 let deletionDistance = (str1, str2) => {
     let short, long;
 
